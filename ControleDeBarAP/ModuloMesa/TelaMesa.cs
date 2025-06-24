@@ -2,7 +2,7 @@
 
 namespace ControleDeBar.ConsoleApp.ModuloMesa;
 
-public class TelaMesa : TelaBase<Garcom>, ITela
+public class TelaMesa : TelaBase<Mesa>, ITela
 {
     public TelaMesa(RepositorioMesa repositorioMesa) : base("Mesa", repositorioMesa)
     {
@@ -22,11 +22,11 @@ public class TelaMesa : TelaBase<Garcom>, ITela
             "Id", "Número", "Capacidade", "Status"
         );
 
-        Garcom[] mesas = repositorio.SelecionarRegistros();
+        Mesa[] mesas = repositorio.SelecionarRegistros();
 
         for (int i = 0; i < mesas.Length; i++)
         {
-            Garcom m = mesas[i];
+            Mesa m = mesas[i];
 
             if (m == null)
                 continue;
@@ -42,7 +42,7 @@ public class TelaMesa : TelaBase<Garcom>, ITela
         ApresentarMensagem("Digite ENTER para continuar...", ConsoleColor.DarkYellow);
     }
 
-    protected override Garcom ObterDados()
+    protected override Mesa ObterDados()
     {
         bool conseguiuConverterNumero = false;
 
