@@ -2,13 +2,13 @@
 
 namespace ControleDeBar.ConsoleApp.ModuloMesa;
 
-public class Mesa : EntidadeBase<Mesa>
+public class Garcom : EntidadeBase<Garcom>
 {
     public int Numero { get; set; }
     public int Capacidade { get; set; }
     public bool EstaOcupada { get; set; }
 
-    public Mesa(int numero, int capacidade)
+    public Garcom(int numero, int capacidade)
     {
         Numero = numero;
         Capacidade = capacidade;
@@ -25,7 +25,7 @@ public class Mesa : EntidadeBase<Mesa>
         EstaOcupada = false;
     }
 
-    public override void AtualizarRegistro(Mesa registroAtualizado)
+    public override void AtualizarRegistro(Garcom registroAtualizado)
     {
         Numero = registroAtualizado.Numero;
         Capacidade = registroAtualizado.Capacidade;

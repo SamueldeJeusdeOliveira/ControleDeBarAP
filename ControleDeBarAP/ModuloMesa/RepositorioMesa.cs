@@ -2,4 +2,4 @@
 
 namespace ControleDeBar.ConsoleApp.ModuloMesa;
 
-public class RepositorioMesa : RepositorioBase<Mesa>;
+public class RepositorioMesa : RepositorioBase<Garcom>;
